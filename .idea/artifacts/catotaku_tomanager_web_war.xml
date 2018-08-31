@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="catotaku-tomanager-web:war">
+    <output-path>$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-web/target</output-path>
+    <root id="archive" name="catotaku.war">
+      <element id="artifact" artifact-name="catotaku-tomanager-web:war exploded" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="catotaku-buyertrade-web:war">
+    <output-path>$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-web/target</output-path>
+    <root id="archive" name="catotaku.war">
+      <element id="artifact" artifact-name="catotaku-buyertrade-web:war exploded" />
+    </root>
+  </artifact>
+</component>

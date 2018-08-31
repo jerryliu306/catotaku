@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top.catotaku.common.dao.OrderMapper" >
+  <resultMap id="BaseResultMap" type="top.catotaku.common.pojo.po.Order" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="makeDate" property="makedate" jdbcType="TIMESTAMP" />
+    <result column="paymentDate" property="paymentdate" jdbcType="TIMESTAMP" />
+    <result column="dekuverDate" property="dekuverdate" jdbcType="TIMESTAMP" />
+    <result column="EndDate" property="enddate" jdbcType="TIMESTAMP" />
+    <result column="logisticsNumber" property="logisticsnumber" jdbcType="INTEGER" />
+    <result column="status" property="status" jdbcType="INTEGER" />
+    <result column="discounts" property="discounts" jdbcType="DOUBLE" />
+    <result column="shopVolume" property="shopvolume" jdbcType="DOUBLE" />
+    <result column="fireight" property="fireight" jdbcType="DOUBLE" />
+    <result column="u_id" property="uId" jdbcType="INTEGER" />
+    <result column="ua_id" property="uaId" jdbcType="INTEGER" />
+    <result column="xx_id" property="xxId" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, makeDate, paymentDate, dekuverDate, EndDate, logisticsNumber, status, discounts, 
+    shopVolume, fireight, u_id, ua_id, xx_id
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="top.catotaku.common.pojo.po.OrderExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from order
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from order
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from order
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="top.catotaku.common.pojo.po.OrderExample" >
+    delete from order
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="top.catotaku.common.pojo.po.Order" >
+    insert into order (id, makeDate, paymentDate, 
+      dekuverDate, EndDate, logisticsNumber, 
+      status, discounts, shopVolume, 
+      fireight, u_id, ua_id, 
+      xx_id)
+    values (#{id,jdbcType=INTEGER}, #{makedate,jdbcType=TIMESTAMP}, #{paymentdate,jdbcType=TIMESTAMP}, 
+      #{dekuverdate,jdbcType=TIMESTAMP}, #{enddate,jdbcType=TIMESTAMP}, #{logisticsnumber,jdbcType=INTEGER}, 
+      #{status,jdbcType=INTEGER}, #{discounts,jdbcType=DOUBLE}, #{shopvolume,jdbcType=DOUBLE}, 
+      #{fireight,jdbcType=DOUBLE}, #{uId,jdbcType=INTEGER}, #{uaId,jdbcType=INTEGER}, 
+      #{xxId,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="top.catotaku.common.pojo.po.Order" >
+    insert into order
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="makedate != null" >
+        makeDate,
+      </if>
+      <if test="paymentdate != null" >
+        paymentDate,
+      </if>
+      <if test="dekuverdate != null" >
+        dekuverDate,
+      </if>
+      <if test="enddate != null" >
+        EndDate,
+      </if>
+      <if test="logisticsnumber != null" >
+        logisticsNumber,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="discounts != null" >
+        discounts,
+      </if>
+      <if test="shopvolume != null" >
+        shopVolume,
+      </if>
+      <if test="fireight != null" >
+        fireight,
+      </if>
+      <if test="uId != null" >
+        u_id,
+      </if>
+      <if test="uaId != null" >
+        ua_id,
+      </if>
+      <if test="xxId != null" >
+        xx_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="makedate != null" >
+        #{makedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paymentdate != null" >
+        #{paymentdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dekuverdate != null" >
+        #{dekuverdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enddate != null" >
+        #{enddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logisticsnumber != null" >
+        #{logisticsnumber,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=INTEGER},
+      </if>
+      <if test="discounts != null" >
+        #{discounts,jdbcType=DOUBLE},
+      </if>
+      <if test="shopvolume != null" >
+        #{shopvolume,jdbcType=DOUBLE},
+      </if>
+      <if test="fireight != null" >
+        #{fireight,jdbcType=DOUBLE},
+      </if>
+      <if test="uId != null" >
+        #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="uaId != null" >
+        #{uaId,jdbcType=INTEGER},
+      </if>
+      <if test="xxId != null" >
+        #{xxId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="top.catotaku.common.pojo.po.OrderExample" resultType="java.lang.Integer" >
+    select count(*) from order
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update order
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.makedate != null" >
+        makeDate = #{record.makedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.paymentdate != null" >
+        paymentDate = #{record.paymentdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.dekuverdate != null" >
+        dekuverDate = #{record.dekuverdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.enddate != null" >
+        EndDate = #{record.enddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.logisticsnumber != null" >
+        logisticsNumber = #{record.logisticsnumber,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=INTEGER},
+      </if>
+      <if test="record.discounts != null" >
+        discounts = #{record.discounts,jdbcType=DOUBLE},
+      </if>
+      <if test="record.shopvolume != null" >
+        shopVolume = #{record.shopvolume,jdbcType=DOUBLE},
+      </if>
+      <if test="record.fireight != null" >
+        fireight = #{record.fireight,jdbcType=DOUBLE},
+      </if>
+      <if test="record.uId != null" >
+        u_id = #{record.uId,jdbcType=INTEGER},
+      </if>
+      <if test="record.uaId != null" >
+        ua_id = #{record.uaId,jdbcType=INTEGER},
+      </if>
+      <if test="record.xxId != null" >
+        xx_id = #{record.xxId,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update order
+    set id = #{record.id,jdbcType=INTEGER},
+      makeDate = #{record.makedate,jdbcType=TIMESTAMP},
+      paymentDate = #{record.paymentdate,jdbcType=TIMESTAMP},
+      dekuverDate = #{record.dekuverdate,jdbcType=TIMESTAMP},
+      EndDate = #{record.enddate,jdbcType=TIMESTAMP},
+      logisticsNumber = #{record.logisticsnumber,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=INTEGER},
+      discounts = #{record.discounts,jdbcType=DOUBLE},
+      shopVolume = #{record.shopvolume,jdbcType=DOUBLE},
+      fireight = #{record.fireight,jdbcType=DOUBLE},
+      u_id = #{record.uId,jdbcType=INTEGER},
+      ua_id = #{record.uaId,jdbcType=INTEGER},
+      xx_id = #{record.xxId,jdbcType=INTEGER}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="top.catotaku.common.pojo.po.Order" >
+    update order
+    <set >
+      <if test="makedate != null" >
+        makeDate = #{makedate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="paymentdate != null" >
+        paymentDate = #{paymentdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dekuverdate != null" >
+        dekuverDate = #{dekuverdate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="enddate != null" >
+        EndDate = #{enddate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="logisticsnumber != null" >
+        logisticsNumber = #{logisticsnumber,jdbcType=INTEGER},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=INTEGER},
+      </if>
+      <if test="discounts != null" >
+        discounts = #{discounts,jdbcType=DOUBLE},
+      </if>
+      <if test="shopvolume != null" >
+        shopVolume = #{shopvolume,jdbcType=DOUBLE},
+      </if>
+      <if test="fireight != null" >
+        fireight = #{fireight,jdbcType=DOUBLE},
+      </if>
+      <if test="uId != null" >
+        u_id = #{uId,jdbcType=INTEGER},
+      </if>
+      <if test="uaId != null" >
+        ua_id = #{uaId,jdbcType=INTEGER},
+      </if>
+      <if test="xxId != null" >
+        xx_id = #{xxId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="top.catotaku.common.pojo.po.Order" >
+    update order
+    set makeDate = #{makedate,jdbcType=TIMESTAMP},
+      paymentDate = #{paymentdate,jdbcType=TIMESTAMP},
+      dekuverDate = #{dekuverdate,jdbcType=TIMESTAMP},
+      EndDate = #{enddate,jdbcType=TIMESTAMP},
+      logisticsNumber = #{logisticsnumber,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      discounts = #{discounts,jdbcType=DOUBLE},
+      shopVolume = #{shopvolume,jdbcType=DOUBLE},
+      fireight = #{fireight,jdbcType=DOUBLE},
+      u_id = #{uId,jdbcType=INTEGER},
+      ua_id = #{uaId,jdbcType=INTEGER},
+      xx_id = #{xxId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
