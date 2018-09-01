@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-detail/catotaku-detail-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-from/catotaku-from-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-home/catotaku-home-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-manager/catotaku-manager-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-search/catotaku-search-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-sell/catotaku-sell-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-web" />
+    <file type="web" url="file://$PROJECT_DIR$/catotaku-video/catotaku-video-web" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/catotaku-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/catotaku-from/catotaku-from-pojo/pom.xml" />
+        <option value="$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-web/pom.xml" />
+        <option value="$PROJECT_DIR$/catotaku-login/catotaku-login-web/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_10" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

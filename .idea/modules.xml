@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade.iml" filepath="$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-dao/catotaku-buyertrade-dao.iml" filepath="$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-dao/catotaku-buyertrade-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-interface/catotaku-buyertrade-interface.iml" filepath="$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-interface/catotaku-buyertrade-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-pojo/catotaku-buyertrade-pojo.iml" filepath="$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-pojo/catotaku-buyertrade-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-service/catotaku-buyertrade-service.iml" filepath="$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-service/catotaku-buyertrade-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-web/catotaku-buyertrade-web.iml" filepath="$PROJECT_DIR$/catotaku-buyertrade/catotaku-buyertrade-web/catotaku-buyertrade-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-common/catotaku-common.iml" filepath="$PROJECT_DIR$/catotaku-common/catotaku-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-detail/catotaku-detail.iml" filepath="$PROJECT_DIR$/catotaku-detail/catotaku-detail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-detail/catotaku-detail-dao/catotaku-detail-dao.iml" filepath="$PROJECT_DIR$/catotaku-detail/catotaku-detail-dao/catotaku-detail-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-detail/catotaku-detail-interface/catotaku-detail-interface.iml" filepath="$PROJECT_DIR$/catotaku-detail/catotaku-detail-interface/catotaku-detail-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-detail/catotaku-detail-pojo/catotaku-detail-pojo.iml" filepath="$PROJECT_DIR$/catotaku-detail/catotaku-detail-pojo/catotaku-detail-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-detail/catotaku-detail-service/catotaku-detail-service.iml" filepath="$PROJECT_DIR$/catotaku-detail/catotaku-detail-service/catotaku-detail-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-detail/catotaku-detail-web/catotaku-detail-web.iml" filepath="$PROJECT_DIR$/catotaku-detail/catotaku-detail-web/catotaku-detail-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-fcart/catotaku-fcart.iml" filepath="$PROJECT_DIR$/catotaku-fcart/catotaku-fcart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-dao/catotaku-fcart-dao.iml" filepath="$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-dao/catotaku-fcart-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-interface/catotaku-fcart-interface.iml" filepath="$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-interface/catotaku-fcart-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-pojo/catotaku-fcart-pojo.iml" filepath="$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-pojo/catotaku-fcart-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-service/catotaku-fcart-service.iml" filepath="$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-service/catotaku-fcart-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-web/catotaku-fcart-web.iml" filepath="$PROJECT_DIR$/catotaku-fcart/catotaku-fcart-web/catotaku-fcart-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-from/catotaku-from.iml" filepath="$PROJECT_DIR$/catotaku-from/catotaku-from.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-from/catotaku-from-dao/catotaku-from-dao.iml" filepath="$PROJECT_DIR$/catotaku-from/catotaku-from-dao/catotaku-from-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-from/catotaku-from-interface/catotaku-from-interface.iml" filepath="$PROJECT_DIR$/catotaku-from/catotaku-from-interface/catotaku-from-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-from/catotaku-from-pojo/catotaku-from-pojo.iml" filepath="$PROJECT_DIR$/catotaku-from/catotaku-from-pojo/catotaku-from-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-from/catotaku-from-service/catotaku-from-service.iml" filepath="$PROJECT_DIR$/catotaku-from/catotaku-from-service/catotaku-from-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-from/catotaku-from-web/catotaku-from-web.iml" filepath="$PROJECT_DIR$/catotaku-from/catotaku-from-web/catotaku-from-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-home/catotaku-home.iml" filepath="$PROJECT_DIR$/catotaku-home/catotaku-home.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-home/catotaku-home-dao/catotaku-home-dao.iml" filepath="$PROJECT_DIR$/catotaku-home/catotaku-home-dao/catotaku-home-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-home/catotaku-home-interface/catotaku-home-interface.iml" filepath="$PROJECT_DIR$/catotaku-home/catotaku-home-interface/catotaku-home-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-home/catotaku-home-pojo/catotaku-home-pojo.iml" filepath="$PROJECT_DIR$/catotaku-home/catotaku-home-pojo/catotaku-home-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-home/catotaku-home-service/catotaku-home-service.iml" filepath="$PROJECT_DIR$/catotaku-home/catotaku-home-service/catotaku-home-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-home/catotaku-home-web/catotaku-home-web.iml" filepath="$PROJECT_DIR$/catotaku-home/catotaku-home-web/catotaku-home-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-login/catotaku-login.iml" filepath="$PROJECT_DIR$/catotaku-login/catotaku-login.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-login/catotaku-login-dao/catotaku-login-dao.iml" filepath="$PROJECT_DIR$/catotaku-login/catotaku-login-dao/catotaku-login-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-login/catotaku-login-interface/catotaku-login-interface.iml" filepath="$PROJECT_DIR$/catotaku-login/catotaku-login-interface/catotaku-login-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-login/catotaku-login-pojo/catotaku-login-pojo.iml" filepath="$PROJECT_DIR$/catotaku-login/catotaku-login-pojo/catotaku-login-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-login/catotaku-login-service/catotaku-login-service.iml" filepath="$PROJECT_DIR$/catotaku-login/catotaku-login-service/catotaku-login-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-login/catotaku-login-web/catotaku-login-web.iml" filepath="$PROJECT_DIR$/catotaku-login/catotaku-login-web/catotaku-login-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-manager/catotaku-manager.iml" filepath="$PROJECT_DIR$/catotaku-manager/catotaku-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-manager/catotaku-manager-dao/catotaku-manager-dao.iml" filepath="$PROJECT_DIR$/catotaku-manager/catotaku-manager-dao/catotaku-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-manager/catotaku-manager-interface/catotaku-manager-interface.iml" filepath="$PROJECT_DIR$/catotaku-manager/catotaku-manager-interface/catotaku-manager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-manager/catotaku-manager-pojo/catotaku-manager-pojo.iml" filepath="$PROJECT_DIR$/catotaku-manager/catotaku-manager-pojo/catotaku-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-manager/catotaku-manager-service/catotaku-manager-service.iml" filepath="$PROJECT_DIR$/catotaku-manager/catotaku-manager-service/catotaku-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-manager/catotaku-manager-web/catotaku-manager-web.iml" filepath="$PROJECT_DIR$/catotaku-manager/catotaku-manager-web/catotaku-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-parent/catotaku-parent.iml" filepath="$PROJECT_DIR$/catotaku-parent/catotaku-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay.iml" filepath="$PROJECT_DIR$/catotaku-pay/catotaku-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-dao/catotaku-pay-dao.iml" filepath="$PROJECT_DIR$/catotaku-pay/catotaku-pay-dao/catotaku-pay-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-interface/catotaku-pay-interface.iml" filepath="$PROJECT_DIR$/catotaku-pay/catotaku-pay-interface/catotaku-pay-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-pojo/catotaku-pay-pojo.iml" filepath="$PROJECT_DIR$/catotaku-pay/catotaku-pay-pojo/catotaku-pay-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-service/catotaku-pay-service.iml" filepath="$PROJECT_DIR$/catotaku-pay/catotaku-pay-service/catotaku-pay-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-web/catotaku-pay-web.iml" filepath="$PROJECT_DIR$/catotaku-pay/catotaku-pay-web/catotaku-pay-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-search/catotaku-search.iml" filepath="$PROJECT_DIR$/catotaku-search/catotaku-search.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-search/catotaku-search-dao/catotaku-search-dao.iml" filepath="$PROJECT_DIR$/catotaku-search/catotaku-search-dao/catotaku-search-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-search/catotaku-search-interface/catotaku-search-interface.iml" filepath="$PROJECT_DIR$/catotaku-search/catotaku-search-interface/catotaku-search-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-search/catotaku-search-pojo/catotaku-search-pojo.iml" filepath="$PROJECT_DIR$/catotaku-search/catotaku-search-pojo/catotaku-search-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-search/catotaku-search-service/catotaku-search-service.iml" filepath="$PROJECT_DIR$/catotaku-search/catotaku-search-service/catotaku-search-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-search/catotaku-search-web/catotaku-search-web.iml" filepath="$PROJECT_DIR$/catotaku-search/catotaku-search-web/catotaku-search-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-sell/catotaku-sell.iml" filepath="$PROJECT_DIR$/catotaku-sell/catotaku-sell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-sell/catotaku-sell-dao/catotaku-sell-dao.iml" filepath="$PROJECT_DIR$/catotaku-sell/catotaku-sell-dao/catotaku-sell-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-sell/catotaku-sell-interface/catotaku-sell-interface.iml" filepath="$PROJECT_DIR$/catotaku-sell/catotaku-sell-interface/catotaku-sell-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-sell/catotaku-sell-pojo/catotaku-sell-pojo.iml" filepath="$PROJECT_DIR$/catotaku-sell/catotaku-sell-pojo/catotaku-sell-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-sell/catotaku-sell-service/catotaku-sell-service.iml" filepath="$PROJECT_DIR$/catotaku-sell/catotaku-sell-service/catotaku-sell-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-sell/catotaku-sell-web/catotaku-sell-web.iml" filepath="$PROJECT_DIR$/catotaku-sell/catotaku-sell-web/catotaku-sell-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager.iml" filepath="$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-dao/catotaku-tomanager-dao.iml" filepath="$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-dao/catotaku-tomanager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-interface/catotaku-tomanager-interface.iml" filepath="$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-interface/catotaku-tomanager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-pojo/catotaku-tomanager-pojo.iml" filepath="$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-pojo/catotaku-tomanager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-service/catotaku-tomanager-service.iml" filepath="$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-service/catotaku-tomanager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-web/catotaku-tomanager-web.iml" filepath="$PROJECT_DIR$/catotaku-tomanager/catotaku-tomanager-web/catotaku-tomanager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-video/catotaku-video.iml" filepath="$PROJECT_DIR$/catotaku-video/catotaku-video.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-video/catotaku-video-dao/catotaku-video-dao.iml" filepath="$PROJECT_DIR$/catotaku-video/catotaku-video-dao/catotaku-video-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-video/catotaku-video-interface/catotaku-video-interface.iml" filepath="$PROJECT_DIR$/catotaku-video/catotaku-video-interface/catotaku-video-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-video/catotaku-video-pojo/catotaku-video-pojo.iml" filepath="$PROJECT_DIR$/catotaku-video/catotaku-video-pojo/catotaku-video-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-video/catotaku-video-service/catotaku-video-service.iml" filepath="$PROJECT_DIR$/catotaku-video/catotaku-video-service/catotaku-video-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/catotaku-video/catotaku-video-web/catotaku-video-web.iml" filepath="$PROJECT_DIR$/catotaku-video/catotaku-video-web/catotaku-video-web.iml" />
+    </modules>
+  </component>
+</project>

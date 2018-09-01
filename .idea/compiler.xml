@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="catotaku-buyertrade-dao" />
+        <module name="catotaku-buyertrade-interface" />
+        <module name="catotaku-buyertrade-pojo" />
+        <module name="catotaku-buyertrade-service" />
+        <module name="catotaku-buyertrade-web" />
+        <module name="catotaku-common" />
+        <module name="catotaku-detail-dao" />
+        <module name="catotaku-detail-interface" />
+        <module name="catotaku-detail-pojo" />
+        <module name="catotaku-detail-service" />
+        <module name="catotaku-detail-web" />
+        <module name="catotaku-fcart-dao" />
+        <module name="catotaku-fcart-interface" />
+        <module name="catotaku-fcart-pojo" />
+        <module name="catotaku-fcart-service" />
+        <module name="catotaku-fcart-web" />
+        <module name="catotaku-from-dao" />
+        <module name="catotaku-from-interface" />
+        <module name="catotaku-from-pojo" />
+        <module name="catotaku-from-service" />
+        <module name="catotaku-from-web" />
+        <module name="catotaku-home-dao" />
+        <module name="catotaku-home-interface" />
+        <module name="catotaku-home-pojo" />
+        <module name="catotaku-home-service" />
+        <module name="catotaku-home-web" />
+        <module name="catotaku-login-dao" />
+        <module name="catotaku-login-interface" />
+        <module name="catotaku-login-pojo" />
+        <module name="catotaku-login-service" />
+        <module name="catotaku-login-web" />
+        <module name="catotaku-manager-dao" />
+        <module name="catotaku-manager-interface" />
+        <module name="catotaku-manager-pojo" />
+        <module name="catotaku-manager-service" />
+        <module name="catotaku-manager-web" />
+        <module name="catotaku-pay-dao" />
+        <module name="catotaku-pay-interface" />
+        <module name="catotaku-pay-pojo" />
+        <module name="catotaku-pay-service" />
+        <module name="catotaku-pay-web" />
+        <module name="catotaku-search-dao" />
+        <module name="catotaku-search-interface" />
+        <module name="catotaku-search-pojo" />
+        <module name="catotaku-search-service" />
+        <module name="catotaku-search-web" />
+        <module name="catotaku-sell-dao" />
+        <module name="catotaku-sell-interface" />
+        <module name="catotaku-sell-pojo" />
+        <module name="catotaku-sell-service" />
+        <module name="catotaku-sell-web" />
+        <module name="catotaku-tomanager-dao" />
+        <module name="catotaku-tomanager-interface" />
+        <module name="catotaku-tomanager-pojo" />
+        <module name="catotaku-tomanager-service" />
+        <module name="catotaku-tomanager-web" />
+        <module name="catotaku-video-dao" />
+        <module name="catotaku-video-interface" />
+        <module name="catotaku-video-pojo" />
+        <module name="catotaku-video-service" />
+        <module name="catotaku-video-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="catotaku-buyertrade" target="1.8" />
+      <module name="catotaku-buyertrade-dao" target="1.8" />
+      <module name="catotaku-buyertrade-interface" target="1.8" />
+      <module name="catotaku-buyertrade-pojo" target="1.8" />
+      <module name="catotaku-buyertrade-service" target="1.8" />
+      <module name="catotaku-buyertrade-web" target="1.8" />
+      <module name="catotaku-common" target="1.8" />
+      <module name="catotaku-detail" target="1.8" />
+      <module name="catotaku-detail-dao" target="1.8" />
+      <module name="catotaku-detail-interface" target="1.8" />
+      <module name="catotaku-detail-pojo" target="1.8" />
+      <module name="catotaku-detail-service" target="1.8" />
+      <module name="catotaku-detail-web" target="1.8" />
+      <module name="catotaku-fcart" target="1.8" />
+      <module name="catotaku-fcart-dao" target="1.8" />
+      <module name="catotaku-fcart-interface" target="1.8" />
+      <module name="catotaku-fcart-pojo" target="1.8" />
+      <module name="catotaku-fcart-service" target="1.8" />
+      <module name="catotaku-fcart-web" target="1.8" />
+      <module name="catotaku-from" target="1.8" />
+      <module name="catotaku-from-dao" target="1.8" />
+      <module name="catotaku-from-interface" target="1.8" />
+      <module name="catotaku-from-po" target="1.8" />
+      <module name="catotaku-from-pojo" target="1.8" />
+      <module name="catotaku-from-service" target="1.8" />
+      <module name="catotaku-from-web" target="1.8" />
+      <module name="catotaku-home" target="1.8" />
+      <module name="catotaku-home-dao" target="1.8" />
+      <module name="catotaku-home-interface" target="1.8" />
+      <module name="catotaku-home-pojo" target="1.8" />
+      <module name="catotaku-home-service" target="1.8" />
+      <module name="catotaku-home-web" target="1.8" />
+      <module name="catotaku-login" target="1.8" />
+      <module name="catotaku-login-dao" target="1.8" />
+      <module name="catotaku-login-interface" target="1.8" />
+      <module name="catotaku-login-pojo" target="1.8" />
+      <module name="catotaku-login-service" target="1.8" />
+      <module name="catotaku-login-web" target="1.8" />
+      <module name="catotaku-manager" target="1.8" />
+      <module name="catotaku-manager-dao" target="1.8" />
+      <module name="catotaku-manager-interface" target="1.8" />
+      <module name="catotaku-manager-pojo" target="1.8" />
+      <module name="catotaku-manager-service" target="1.8" />
+      <module name="catotaku-manager-web" target="1.8" />
+      <module name="catotaku-parent" target="1.8" />
+      <module name="catotaku-pay" target="1.8" />
+      <module name="catotaku-pay-dao" target="1.8" />
+      <module name="catotaku-pay-interface" target="1.8" />
+      <module name="catotaku-pay-pojo" target="1.8" />
+      <module name="catotaku-pay-service" target="1.8" />
+      <module name="catotaku-pay-web" target="1.8" />
+      <module name="catotaku-search" target="1.8" />
+      <module name="catotaku-search-dao" target="1.8" />
+      <module name="catotaku-search-interface" target="1.8" />
+      <module name="catotaku-search-pojo" target="1.8" />
+      <module name="catotaku-search-service" target="1.8" />
+      <module name="catotaku-search-web" target="1.8" />
+      <module name="catotaku-sell" target="1.8" />
+      <module name="catotaku-sell-dao" target="1.8" />
+      <module name="catotaku-sell-interface" target="1.8" />
+      <module name="catotaku-sell-pojo" target="1.8" />
+      <module name="catotaku-sell-service" target="1.8" />
+      <module name="catotaku-sell-web" target="1.8" />
+      <module name="catotaku-tomanager" target="1.8" />
+      <module name="catotaku-tomanager-dao" target="1.8" />
+      <module name="catotaku-tomanager-interface" target="1.8" />
+      <module name="catotaku-tomanager-pojo" target="1.8" />
+      <module name="catotaku-tomanager-service" target="1.8" />
+      <module name="catotaku-tomanager-web" target="1.8" />
+      <module name="catotaku-video" target="1.8" />
+      <module name="catotaku-video-dao" target="1.8" />
+      <module name="catotaku-video-interface" target="1.8" />
+      <module name="catotaku-video-pojo" target="1.8" />
+      <module name="catotaku-video-service" target="1.8" />
+      <module name="catotaku-video-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
