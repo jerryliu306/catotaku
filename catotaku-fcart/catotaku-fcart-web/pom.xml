@@ -49,7 +49,7 @@
                 <version>2.2</version>
                 <configuration>
                     <port>8080</port>
-                    <path>/facart</path>
+                    <path>/fcart</path>
                 </configuration>
             </plugin>
         </plugins>

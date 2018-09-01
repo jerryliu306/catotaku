@@ -12,7 +12,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>catotaku-from-pojo</module>
-        <module>catotaku-from-pojo</module>
         <module>catotaku-from-dao</module>
         <module>catotaku-from-interface</module>
         <module>catotaku-from-service</module>
