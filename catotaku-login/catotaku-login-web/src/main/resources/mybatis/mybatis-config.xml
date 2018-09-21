@@ -16,6 +16,6 @@
 <!--        <setting name="logImpl" value="LOG4J2" />-->
     </settings>
     <typeAliases>
-        <package name="top.catotaku.manager.pojo" />
+        <package name="top.catotaku.login.pojo" />
     </typeAliases>
 </configuration>

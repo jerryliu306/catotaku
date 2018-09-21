@@ -4,9 +4,9 @@
   <resultMap id="BaseResultMap" type="top.catotaku.common.pojo.po.Pricturedata" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="u_id" property="uId" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="INTEGER" />
-    <result column="prictureUrl" property="prictureurl" jdbcType="INTEGER" />
-    <result column="status" property="status" jdbcType="DOUBLE" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="prictureUrl" property="prictureurl" jdbcType="VARCHAR" />
+    <result column="status" property="status" jdbcType="INTEGER" />
     <result column="xx_id" property="xxId" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -104,8 +104,8 @@
     insert into pricturedata (id, u_id, name, 
       prictureUrl, status, xx_id
       )
-    values (#{id,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{name,jdbcType=INTEGER}, 
-      #{prictureurl,jdbcType=INTEGER}, #{status,jdbcType=DOUBLE}, #{xxId,jdbcType=INTEGER}
+    values (#{id,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
+      #{prictureurl,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{xxId,jdbcType=INTEGER}
       )
   </insert>
   <insert id="insertSelective" parameterType="top.catotaku.common.pojo.po.Pricturedata" >
@@ -138,13 +138,13 @@
         #{uId,jdbcType=INTEGER},
       </if>
       <if test="name != null" >
-        #{name,jdbcType=INTEGER},
+        #{name,jdbcType=VARCHAR},
       </if>
       <if test="prictureurl != null" >
-        #{prictureurl,jdbcType=INTEGER},
+        #{prictureurl,jdbcType=VARCHAR},
       </if>
       <if test="status != null" >
-        #{status,jdbcType=DOUBLE},
+        #{status,jdbcType=INTEGER},
       </if>
       <if test="xxId != null" >
         #{xxId,jdbcType=INTEGER},
@@ -167,13 +167,13 @@
         u_id = #{record.uId,jdbcType=INTEGER},
       </if>
       <if test="record.name != null" >
-        name = #{record.name,jdbcType=INTEGER},
+        name = #{record.name,jdbcType=VARCHAR},
       </if>
       <if test="record.prictureurl != null" >
-        prictureUrl = #{record.prictureurl,jdbcType=INTEGER},
+        prictureUrl = #{record.prictureurl,jdbcType=VARCHAR},
       </if>
       <if test="record.status != null" >
-        status = #{record.status,jdbcType=DOUBLE},
+        status = #{record.status,jdbcType=INTEGER},
       </if>
       <if test="record.xxId != null" >
         xx_id = #{record.xxId,jdbcType=INTEGER},
@@ -187,9 +187,9 @@
     update pricturedata
     set id = #{record.id,jdbcType=INTEGER},
       u_id = #{record.uId,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=INTEGER},
-      prictureUrl = #{record.prictureurl,jdbcType=INTEGER},
-      status = #{record.status,jdbcType=DOUBLE},
+      name = #{record.name,jdbcType=VARCHAR},
+      prictureUrl = #{record.prictureurl,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=INTEGER},
       xx_id = #{record.xxId,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -202,13 +202,13 @@
         u_id = #{uId,jdbcType=INTEGER},
       </if>
       <if test="name != null" >
-        name = #{name,jdbcType=INTEGER},
+        name = #{name,jdbcType=VARCHAR},
       </if>
       <if test="prictureurl != null" >
-        prictureUrl = #{prictureurl,jdbcType=INTEGER},
+        prictureUrl = #{prictureurl,jdbcType=VARCHAR},
       </if>
       <if test="status != null" >
-        status = #{status,jdbcType=DOUBLE},
+        status = #{status,jdbcType=INTEGER},
       </if>
       <if test="xxId != null" >
         xx_id = #{xxId,jdbcType=INTEGER},
@@ -219,9 +219,9 @@
   <update id="updateByPrimaryKey" parameterType="top.catotaku.common.pojo.po.Pricturedata" >
     update pricturedata
     set u_id = #{uId,jdbcType=INTEGER},
-      name = #{name,jdbcType=INTEGER},
-      prictureUrl = #{prictureurl,jdbcType=INTEGER},
-      status = #{status,jdbcType=DOUBLE},
+      name = #{name,jdbcType=VARCHAR},
+      prictureUrl = #{prictureurl,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
       xx_id = #{xxId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>

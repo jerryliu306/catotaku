@@ -39,6 +39,10 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <finalName>catotaku</finalName>
@@ -51,6 +55,15 @@
                     <port>8080</port>
                     <path>/detail</path>
                 </configuration>
+                <!--<configuration>-->
+                <!--&lt;!&ndash;<port>80</port>-->
+                <!--<path>/demo</path>&ndash;&gt;-->
+                <!--<url>http://106.12.99.8:8080/detail</url>-->
+                <!--<username>admin</username>-->
+                <!--<password>qaz113300</password>-->
+                <!--<update>true</update>-->
+                <!--<path>/detail</path>-->
+                <!--</configuration>-->
             </plugin>
         </plugins>
     </build>

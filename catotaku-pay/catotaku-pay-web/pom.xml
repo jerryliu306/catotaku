@@ -48,10 +48,16 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <port>8080</port>
+                    <!--<port>80</port>
+                    <path>/demo</path>-->
+                    <url>http://106.12.99.8:8080/pay</url>
+                    <username>admin</username>
+                    <password>qaz113300</password>
+                    <update>true</update>
                     <path>/pay</path>
                 </configuration>
             </plugin>
         </plugins>
+
     </build>
 </project>

@@ -16,7 +16,6 @@
         <module>catotaku-login-interface</module>
         <module>catotaku-login-service</module>
         <module>catotaku-login-web</module>
-        <module>catotaku-login-web</module>
     </modules>
     <artifactId>catotaku-login</artifactId>
     <dependencies>

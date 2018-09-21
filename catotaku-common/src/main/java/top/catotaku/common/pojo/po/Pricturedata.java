@@ -5,11 +5,11 @@ public class Pricturedata {
 
     private Integer uId;
 
-    private Integer name;
+    private String name;
 
-    private Integer prictureurl;
+    private String prictureurl;
 
-    private Double status;
+    private Integer status;
 
     private Integer xxId;
 
@@ -29,27 +29,27 @@ public class Pricturedata {
         this.uId = uId;
     }
 
-    public Integer getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Integer name) {
-        this.name = name;
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 
-    public Integer getPrictureurl() {
+    public String getPrictureurl() {
         return prictureurl;
     }
 
-    public void setPrictureurl(Integer prictureurl) {
-        this.prictureurl = prictureurl;
+    public void setPrictureurl(String prictureurl) {
+        this.prictureurl = prictureurl == null ? null : prictureurl.trim();
     }
 
-    public Double getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(Double status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 

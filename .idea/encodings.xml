@@ -24,7 +24,6 @@
     <file url="file://$PROJECT_DIR$/catotaku-from/catotaku-from-dao" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catotaku-from/catotaku-from-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catotaku-from/catotaku-from-pojo" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/catotaku-from/catotaku-from-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catotaku-from/catotaku-from-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catotaku-from/catotaku-from-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catotaku-home" charset="UTF-8" />
@@ -51,6 +50,7 @@
     <file url="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-interface" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-service/src/main/java/top/catotaku/pay/service/AlipayConfig.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/catotaku-pay/catotaku-pay-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catotaku-search" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/catotaku-search/catotaku-search-dao" charset="UTF-8" />

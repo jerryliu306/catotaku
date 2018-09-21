@@ -41,6 +41,8 @@ public class Commodity {
 
     private Integer xxId;
 
+    private String particulars;
+
     public Integer getId() {
         return id;
     }
@@ -191,5 +193,13 @@ public class Commodity {
 
     public void setXxId(Integer xxId) {
         this.xxId = xxId;
+    }
+
+    public String getParticulars() {
+        return particulars;
+    }
+
+    public void setParticulars(String particulars) {
+        this.particulars = particulars == null ? null : particulars.trim();
     }
 }

@@ -9,11 +9,11 @@
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx.xsd">
-    <context:component-scan base-package="top.catotaku.manager.service.impl"/>
+    <context:component-scan base-package="top.catotaku.login.service"/>
 
     <!-- 配置jdbc事务管理器 -->
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource"></property>
+        <property name="dataSource" ref="dataSource"/>
     </bean>
     <!-- 开启事务注解驱动 -->
     <tx:annotation-driven transaction-manager="txManager"/>

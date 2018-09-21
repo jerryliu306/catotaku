@@ -52,10 +52,10 @@
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
-        <property name="basePackage" value="top.catotaku.manager.dao"></property>
+        <property name="basePackage" value="top.catotaku.*.dao"></property>
     </bean>
 
-    <context:component-scan base-package="top.catotaku.manager.dao"/>
+    <context:component-scan base-package="top.catotaku.*.dao"/>
 
 
 </beans>

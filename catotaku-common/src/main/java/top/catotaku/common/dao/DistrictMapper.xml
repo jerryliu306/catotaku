@@ -5,7 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="level" property="level" jdbcType="INTEGER" />
     <result column="d_id" property="dId" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="xx_id" property="xxId" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -103,7 +103,7 @@
     insert into district (id, level, d_id, 
       name, xx_id)
     values (#{id,jdbcType=INTEGER}, #{level,jdbcType=INTEGER}, #{dId,jdbcType=INTEGER}, 
-      #{name,jdbcType=INTEGER}, #{xxId,jdbcType=INTEGER})
+      #{name,jdbcType=VARCHAR}, #{xxId,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="top.catotaku.common.pojo.po.District" >
     insert into district
@@ -135,7 +135,7 @@
         #{dId,jdbcType=INTEGER},
       </if>
       <if test="name != null" >
-        #{name,jdbcType=INTEGER},
+        #{name,jdbcType=VARCHAR},
       </if>
       <if test="xxId != null" >
         #{xxId,jdbcType=INTEGER},
@@ -161,7 +161,7 @@
         d_id = #{record.dId,jdbcType=INTEGER},
       </if>
       <if test="record.name != null" >
-        name = #{record.name,jdbcType=INTEGER},
+        name = #{record.name,jdbcType=VARCHAR},
       </if>
       <if test="record.xxId != null" >
         xx_id = #{record.xxId,jdbcType=INTEGER},
@@ -176,7 +176,7 @@
     set id = #{record.id,jdbcType=INTEGER},
       level = #{record.level,jdbcType=INTEGER},
       d_id = #{record.dId,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
       xx_id = #{record.xxId,jdbcType=INTEGER}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -192,7 +192,7 @@
         d_id = #{dId,jdbcType=INTEGER},
       </if>
       <if test="name != null" >
-        name = #{name,jdbcType=INTEGER},
+        name = #{name,jdbcType=VARCHAR},
       </if>
       <if test="xxId != null" >
         xx_id = #{xxId,jdbcType=INTEGER},
@@ -204,7 +204,7 @@
     update district
     set level = #{level,jdbcType=INTEGER},
       d_id = #{dId,jdbcType=INTEGER},
-      name = #{name,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
       xx_id = #{xxId,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>

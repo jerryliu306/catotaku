@@ -4,7 +4,7 @@
   <resultMap id="BaseResultMap" type="top.catotaku.common.pojo.po.Videodata" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="u_id" property="uId" jdbcType="INTEGER" />
-    <result column="name" property="name" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="videoUrl" property="videourl" jdbcType="VARCHAR" />
     <result column="status" property="status" jdbcType="INTEGER" />
     <result column="xx_id" property="xxId" jdbcType="INTEGER" />
@@ -104,7 +104,7 @@
     insert into videodata (id, u_id, name, 
       videoUrl, status, xx_id
       )
-    values (#{id,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{name,jdbcType=INTEGER}, 
+    values (#{id,jdbcType=INTEGER}, #{uId,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
       #{videourl,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{xxId,jdbcType=INTEGER}
       )
   </insert>
@@ -138,7 +138,7 @@
         #{uId,jdbcType=INTEGER},
       </if>
       <if test="name != null" >
-        #{name,jdbcType=INTEGER},
+        #{name,jdbcType=VARCHAR},
       </if>
       <if test="videourl != null" >
         #{videourl,jdbcType=VARCHAR},
@@ -167,7 +167,7 @@
         u_id = #{record.uId,jdbcType=INTEGER},
       </if>
       <if test="record.name != null" >
-        name = #{record.name,jdbcType=INTEGER},
+        name = #{record.name,jdbcType=VARCHAR},
       </if>
       <if test="record.videourl != null" >
         videoUrl = #{record.videourl,jdbcType=VARCHAR},
@@ -187,7 +187,7 @@
     update videodata
     set id = #{record.id,jdbcType=INTEGER},
       u_id = #{record.uId,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
       videoUrl = #{record.videourl,jdbcType=VARCHAR},
       status = #{record.status,jdbcType=INTEGER},
       xx_id = #{record.xxId,jdbcType=INTEGER}
@@ -202,7 +202,7 @@
         u_id = #{uId,jdbcType=INTEGER},
       </if>
       <if test="name != null" >
-        name = #{name,jdbcType=INTEGER},
+        name = #{name,jdbcType=VARCHAR},
       </if>
       <if test="videourl != null" >
         videoUrl = #{videourl,jdbcType=VARCHAR},
@@ -219,7 +219,7 @@
   <update id="updateByPrimaryKey" parameterType="top.catotaku.common.pojo.po.Videodata" >
     update videodata
     set u_id = #{uId,jdbcType=INTEGER},
-      name = #{name,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
       videoUrl = #{videourl,jdbcType=VARCHAR},
       status = #{status,jdbcType=INTEGER},
       xx_id = #{xxId,jdbcType=INTEGER}

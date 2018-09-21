@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top.catotaku.detail.dao.DetailMapper" >
+
+    <resultMap id="BaseResult" type="top.catotaku.detail.pojo.vo.CommodityInfoVO">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="salesPrice" column="salesPrice"></result>
+        <result property="monthlySales" column="monthlySales"></result>
+        <result property="totalSales" column="totalSales"></result>
+        <result property="inventory" column="inventory"></result>
+        <result property="prictureUrl" column="prictureUrl"></result>
+        <result property="storeid" column="storeid"></result>
+        <result property="storename" column="storename"></result>
+        <result property="storeintroduce" column="storeintroduce"></result>
+        <result property="sellname" column="sellname"></result>
+        <result property="districtname" column="districtname"></result>
+        <result property="particulars" column="particulars"></result>
+    </resultMap>
+    <sql id="Base_SQL">
+        c.id id, c.name name, c.price price, c.salesPrice salesPrice, c.monthlySales monthlySales,
+        c.totalSales totalSales, c.inventory inventory, pd.prictureUrl prictureUrl, s.id storeid,
+        s.name storename, s.introduce storeintroduce, u.username sellname, d.name districtname,c.particulars particulars
+    </sql>
+    <select id="itemCommodity" resultMap="BaseResult" parameterType="int">
+        select
+        <include refid="Base_SQL"/>
+        from
+        commodity c
+        left join prictureData pd on c.pd_id = pd.id
+        left join store s on  c.s_id = s.id
+        left join user u on u.id = s.u_id
+        left join useraddress ua on ua.u_id = u.id
+        left join district d on d.id = ua.d_id
+        where c.id = #{id}
+    </select>
+    
+    <select id="listCommodityspecification" parameterType="int" resultType="top.catotaku.common.pojo.po.Commodityspecification">
+        select id,name,`explain`
+        from Commodityspecification
+        where c_id = #{id}
+    </select>
+
+</mapper>

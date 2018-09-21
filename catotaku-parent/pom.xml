@@ -38,7 +38,7 @@
         <fastjson.version>1.2.49</fastjson.version>
         <json.version>20180813</json.version>
         <druid.version>1.1.10</druid.version>
-        <httpclient.version>4.5.6</httpclient.version>
+        <httpclient.version>4.3.5</httpclient.version>
         <jstl.version>1.2</jstl.version>
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
         <jsp-api.version>2.2</jsp-api.version>
@@ -51,18 +51,20 @@
         <jsqlparser.version>0.9.1</jsqlparser.version>
         <commons-fileupload.version>1.3.1</commons-fileupload.version>
         <jedis.version>2.9.0</jedis.version>
-        <solrj.version>7.4.0</solrj.version>
+        <pool2.version>2.6.0</pool2.version>
+        <solrj.version>4.10.3</solrj.version>
         <dubbo.version>2.6.0</dubbo.version>
-        <zookeeper.version>3.4.11</zookeeper.version>
+        <zookeeper.version>3.4.13</zookeeper.version>
         <zkclient.version>0.1</zkclient.version>
         <activemqcore.version>5.7.0</activemqcore.version>
         <activemqpool.version>5.15.2</activemqpool.version>
-        <freemarker.version>2.3.23</freemarker.version>
+        <freemarker.version>2.3.28</freemarker.version>
         <quartz.version>2.3.0</quartz.version>
         <lucene.version>4.10.3</lucene.version>
         <IKAnalyzer.version>2012FF_u1</IKAnalyzer.version>
-        <shiro.version>1.4.0</shiro.version>
+        <shiro.version>1.3.2</shiro.version>
         <fastdfs.version>1.27-SNAPSHOT</fastdfs.version>
+        <jmsapi.version>2.0.1</jmsapi.version>
     </properties>
 
     <!--用于依赖的申明,不会显式的显示在父工程中-->
@@ -93,12 +95,9 @@
                 <artifactId>fastdfs-client-java</artifactId>
                 <version>${fastdfs.version}</version>
             </dependency>
+
+
             <!--权限(安全)框架shiro的核心包-->
-            <dependency>
-                <groupId>org.apache.solr</groupId>
-                <artifactId>solr-solrj</artifactId>
-                <version>${solrj.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-core</artifactId>
@@ -119,6 +118,11 @@
                 <groupId>org.apache.lucene</groupId>
                 <artifactId>lucene-analyzers-common</artifactId>
                 <version>${lucene.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.solr</groupId>
+                <artifactId>solr-solrj</artifactId>
+                <version>${solrj.version}</version>
             </dependency>
             <!--处理百度富文本编辑器的工具包,加密工具包-->
             <dependency>
@@ -300,6 +304,11 @@
                 <artifactId>activemq-pool</artifactId>
                 <version>${activemqpool.version}</version>
             </dependency>
+            <dependency>
+                <groupId>javax.jms</groupId>
+                <artifactId>javax.jms-api</artifactId>
+                <version>${jmsapi.version}</version>
+            </dependency>
             <!-- 文件上传组件 -->
             <dependency>
                 <groupId>commons-fileupload</groupId>
@@ -312,6 +321,12 @@
                 <artifactId>jedis</artifactId>
                 <version>${jedis.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${pool2.version}</version>
+            </dependency>
+
             <!--dubbo相关,提供RPC远程调用框架-->
             <dependency>
                 <groupId>com.alibaba</groupId>

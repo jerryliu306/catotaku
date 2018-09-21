@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="fmXmlEscape" class="freemarker.template.utility.XmlEscape" />-->
+    <bean id="freeMarkerConfigurer" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="/WEB-INF/ftl/"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!--<property name="freemarkerVariables">-->
+            <!--<map>-->
+                <!--<entry key="xml_escape" value-ref="fmXmlEscape"/>-->
+            <!--</map>-->
+        <!--</property>-->
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="template_update_delay">1</prop>
+                <prop key="default_encoding">UTF-8</prop>
+                <prop key="number_format">0.##########</prop>
+                <prop key="datetime_format">yyyy-MM-dd HH:mm:ss</prop>
+                <prop key="classic_compatible">true</prop>
+                <prop key="template_exception_handler">ignore</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="freeMarkerKit" class="top.catotaku.common.freemarker.FreeMarkerKit">
+        <constructor-arg name="freeMarkerConfigurer" ref="freeMarkerConfigurer"/>
+        <constructor-arg name="host" value="121.43.168.127"/>
+        <constructor-arg name="port" value="7907"/>
+        <constructor-arg name="path" value="D:/aaa/"/>
+        <constructor-arg name="suffix" value=".html"/>
+    </bean>
+
+
+</beans>

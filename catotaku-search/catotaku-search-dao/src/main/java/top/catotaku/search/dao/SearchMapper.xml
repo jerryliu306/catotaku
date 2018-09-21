@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="top.catotaku.search.dao.SearchMapper" >
+    <resultMap id="BaseResultMap" type="top.catotaku.search.pojo.vo.CommodityVO" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="pd_id" property="pdId" jdbcType="INTEGER" />
+        <result column="cc_id" property="ccId" jdbcType="INTEGER" />
+        <result column="d_id" property="dId" jdbcType="INTEGER" />
+        <result column="price" property="price" jdbcType="DOUBLE" />
+        <result column="salesPrice" property="salesprice" jdbcType="DOUBLE" />
+        <result column="s_id" property="sId" jdbcType="INTEGER" />
+        <result column="scc_id" property="sccId" jdbcType="INTEGER" />
+        <result column="status" property="status" jdbcType="INTEGER" />
+        <result column="createDate" property="createdate" jdbcType="TIMESTAMP" />
+        <result column="soldOutDate" property="soldoutdate" jdbcType="TIMESTAMP" />
+        <result column="deleteDate" property="deletedate" jdbcType="TIMESTAMP" />
+        <result column="monthlySales" property="monthlysales" jdbcType="INTEGER" />
+        <result column="totalSales" property="totalsales" jdbcType="INTEGER" />
+        <result column="inventory" property="inventory" jdbcType="INTEGER" />
+        <result column="cpc_id" property="cpcId" jdbcType="INTEGER" />
+        <result column="type" property="type" jdbcType="INTEGER" />
+        <result column="xx_id" property="xxId" jdbcType="INTEGER" />
+        <result column="prictureUrl" property="prictureUrl" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Base_SQL">
+        c.id id,c.name name,c.price price,c.salesPrice salesPrice,p.prictureUrl prictureUrl
+    </sql>
+    <select id="listCommodityByPageInfo" resultMap="BaseResultMap" >
+        select c.id id,c.name name,c.price price,c.salesPrice salesPrice,p.prictureUrl prictureUrl
+        from commodity c left join pricturedata p on c.pd_id = p.id
+        where c.status = 1 and
+        c.name like #{name}
+        <if test="pageInfo.sales==1">
+            and c.price > c.salesPrice
+        </if>
+        <if test="pageInfo.inventory==1">
+          and c.inventory>0
+        </if>
+        limit #{pageInfo.itemNum},#{pageInfo.itemSize}
+
+    </select>
+    <select id="countCommodityByPageInfo" resultType="int">
+        select count(1)
+        from commodity c
+        where c.status = 1 and
+        c.name like #{name}
+        <if test="pageInfo.sales==1">
+            and c.price > c.salesPrice
+        </if>
+        <if test="pageInfo.inventory==1">
+            and c.inventory>0
+        </if>
+    </select>
+    <select id="listCommodityByStatus" resultMap="BaseResultMap">
+        select c.id id,c.name name,c.price price,c.salesPrice salesPrice,p.prictureUrl prictureUrl
+        from commodity c left join pricturedata p on c.pd_id = p.id
+        where c.status = 1
+    </select>
+    <select id="itemById" parameterType="_int" resultMap="BaseResultMap">
+        select c.id id,c.name name,c.price price,c.salesPrice salesPrice,p.prictureUrl prictureUrl
+        from commodity c left join pricturedata p on c.pd_id = p.id
+        where c.id=#{id}
+    </select>
+</mapper>

@@ -7,7 +7,7 @@ public class District {
 
     private Integer dId;
 
-    private Integer name;
+    private String name;
 
     private Integer xxId;
 
@@ -35,12 +35,12 @@ public class District {
         this.dId = dId;
     }
 
-    public Integer getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Integer name) {
-        this.name = name;
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 
     public Integer getXxId() {

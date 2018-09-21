@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+">
+
+    <context:property-placeholder location="classpath:db.properties"/>
+    <!-- jdbc数据源 -->
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
+        <!-- 连接数据库的url -->
+        <property name="url" value="${jdbc.url}"></property>
+        <!-- 连接数据的用户名 -->
+        <property name="username" value="${jdbc.username}"></property>
+        <!-- 连接数据库的密码  如果不希望密码写在配置文件中,可以使用ConfigFilter-->
+        <property name="password" value="${jdbc.password}"></property>
+        <!-- 通过别名的方式配置扩展插件   监控统计用的filter:stat  日志用的filter:log4j  防御sql注入用的filter:wail -->
+        <!-- <property name="filters" value="${jdbc.filters}"></property> -->
+        <!-- 初始化时建立物理连接的个数,初始化发生在显示调用init()方法,或者第一次getConnection时 -->
+        <property name="initialSize" value="${jdbc.initialSize}"></property>
+        <!-- 最大连接池数量 -->
+        <property name="maxActive" value="${jdbc.maxActive}"></property>
+        <!-- 获取连接时最大的等待时间,配置了maxWait后,缺省启用公平锁,并发效率会有所下降,如果需要可以通过配置useUnfairLock属性为true使用非公平锁 -->
+        <property name="maxWait" value="${jdbc.maxWait}"></property>
+        <!-- true使用非公平锁 -->
+        <property name="useUnfairLock" value="${jdbc.useUnfairLock}"></property>
+        <!-- 1.Destory线程会检测连接的间隔时间,如果连接空闲时间大于等于该值则关闭物理连接,2.testWhileIdle的判断依据 -->
+        <property name="timeBetweenEvictionRunsMillis" value="${jdbc.timeBetweenEvictionRunsMillis}"></property>
+        <!-- 连接保持空间而不被驱逐的最小时间 -->
+        <property name="minEvictableIdleTimeMillis" value="${jdbc.minEvictableIdleTimeMillis}"></property>
+        <!-- 用来检测连接是否是有效的sql,要求是一个查询语句,如果此为null,则testOnBorrow,testOnReturn,testWhileIdle都不会起作用 -->
+        <property name="validationQuery" value="${jdbc.validationQuery}"></property>
+        <!-- 建议配置为true,不影响性能,并保证安全性,申请连接的时候检测,如果空闲时间大于tiemBetweenEvicationRunsMillis,执行validationQuery检测连接是否有效 -->
+        <property name="testWhileIdle" value="${jdbc.testWhileIdle}"></property>
+        <!-- 归还连接时执行validationQuery检测连接是否有效,做了这个配置会降低性能 -->
+        <property name="testOnReturn" value="${jdbc.testOnReturn}"></property>
+        <!-- 申请连接时执行validationQuery检测连接是否有效,做了这个配置会降低性能 -->
+        <property name="testOnBorrow" value="${jdbc.testOnBorrow}"></property>
+        <!-- 是否缓存preparedStatement,也就是PSCache.PSCache对执行游标的数据库性能提升巨大,比如oracle,在mysql下建议关闭 -->
+        <property name="poolPreparedStatements" value="${jdbc.poolPreparedStatements}"></property>
+        <!-- 要启用PSCache,必须配置大于0,当大于0时,会自动将PSCache设置为true,在Druid中,不会存在Orcle下PSCache占用内存过多的问题,可以把这个数值设置成100 -->
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="${jdbc.maxPoolPreparedStatementPerConnectionSize}"></property>
+    </bean>
+
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"></property>
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
+    </bean>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="top.catotaku.detail.dao"></property>
+    </bean>
+
+    <context:component-scan base-package="top.catotaku.detail.dao"/>
+
+
+</beans>

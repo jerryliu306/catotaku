@@ -22,6 +22,9 @@
     <result column="type" property="type" jdbcType="INTEGER" />
     <result column="xx_id" property="xxId" jdbcType="INTEGER" />
   </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="top.catotaku.common.pojo.po.Commodity" extends="BaseResultMap" >
+    <result column="particulars" property="particulars" jdbcType="LONGVARCHAR" />
+  </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -84,6 +87,25 @@
     id, name, pd_id, cc_id, d_id, price, salesPrice, s_id, scc_id, status, createDate, 
     soldOutDate, deleteDate, monthlySales, totalSales, inventory, cpc_id, type, xx_id
   </sql>
+  <sql id="Blob_Column_List" >
+    particulars
+  </sql>
+  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="top.catotaku.common.pojo.po.CommodityExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from commodity
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="top.catotaku.common.pojo.po.CommodityExample" >
     select
     <if test="distinct" >
@@ -98,9 +120,11 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
     from commodity
     where id = #{id,jdbcType=INTEGER}
   </select>
@@ -120,13 +144,15 @@
       s_id, scc_id, status, 
       createDate, soldOutDate, deleteDate, 
       monthlySales, totalSales, inventory, 
-      cpc_id, type, xx_id)
+      cpc_id, type, xx_id, 
+      particulars)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{pdId,jdbcType=INTEGER}, 
       #{ccId,jdbcType=INTEGER}, #{dId,jdbcType=INTEGER}, #{price,jdbcType=DOUBLE}, #{salesprice,jdbcType=DOUBLE}, 
       #{sId,jdbcType=INTEGER}, #{sccId,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, 
       #{createdate,jdbcType=TIMESTAMP}, #{soldoutdate,jdbcType=TIMESTAMP}, #{deletedate,jdbcType=TIMESTAMP}, 
       #{monthlysales,jdbcType=INTEGER}, #{totalsales,jdbcType=INTEGER}, #{inventory,jdbcType=INTEGER}, 
-      #{cpcId,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}, #{xxId,jdbcType=INTEGER})
+      #{cpcId,jdbcType=INTEGER}, #{type,jdbcType=INTEGER}, #{xxId,jdbcType=INTEGER}, 
+      #{particulars,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="top.catotaku.common.pojo.po.Commodity" >
     insert into commodity
@@ -188,6 +214,9 @@
       <if test="xxId != null" >
         xx_id,
       </if>
+      <if test="particulars != null" >
+        particulars,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -246,6 +275,9 @@
       </if>
       <if test="xxId != null" >
         #{xxId,jdbcType=INTEGER},
+      </if>
+      <if test="particulars != null" >
+        #{particulars,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -315,7 +347,36 @@
       <if test="record.xxId != null" >
         xx_id = #{record.xxId,jdbcType=INTEGER},
       </if>
+      <if test="record.particulars != null" >
+        particulars = #{record.particulars,jdbcType=LONGVARCHAR},
+      </if>
     </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map" >
+    update commodity
+    set id = #{record.id,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      pd_id = #{record.pdId,jdbcType=INTEGER},
+      cc_id = #{record.ccId,jdbcType=INTEGER},
+      d_id = #{record.dId,jdbcType=INTEGER},
+      price = #{record.price,jdbcType=DOUBLE},
+      salesPrice = #{record.salesprice,jdbcType=DOUBLE},
+      s_id = #{record.sId,jdbcType=INTEGER},
+      scc_id = #{record.sccId,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=INTEGER},
+      createDate = #{record.createdate,jdbcType=TIMESTAMP},
+      soldOutDate = #{record.soldoutdate,jdbcType=TIMESTAMP},
+      deleteDate = #{record.deletedate,jdbcType=TIMESTAMP},
+      monthlySales = #{record.monthlysales,jdbcType=INTEGER},
+      totalSales = #{record.totalsales,jdbcType=INTEGER},
+      inventory = #{record.inventory,jdbcType=INTEGER},
+      cpc_id = #{record.cpcId,jdbcType=INTEGER},
+      type = #{record.type,jdbcType=INTEGER},
+      xx_id = #{record.xxId,jdbcType=INTEGER},
+      particulars = #{record.particulars,jdbcType=LONGVARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -402,7 +463,33 @@
       <if test="xxId != null" >
         xx_id = #{xxId,jdbcType=INTEGER},
       </if>
+      <if test="particulars != null" >
+        particulars = #{particulars,jdbcType=LONGVARCHAR},
+      </if>
     </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="top.catotaku.common.pojo.po.Commodity" >
+    update commodity
+    set name = #{name,jdbcType=VARCHAR},
+      pd_id = #{pdId,jdbcType=INTEGER},
+      cc_id = #{ccId,jdbcType=INTEGER},
+      d_id = #{dId,jdbcType=INTEGER},
+      price = #{price,jdbcType=DOUBLE},
+      salesPrice = #{salesprice,jdbcType=DOUBLE},
+      s_id = #{sId,jdbcType=INTEGER},
+      scc_id = #{sccId,jdbcType=INTEGER},
+      status = #{status,jdbcType=INTEGER},
+      createDate = #{createdate,jdbcType=TIMESTAMP},
+      soldOutDate = #{soldoutdate,jdbcType=TIMESTAMP},
+      deleteDate = #{deletedate,jdbcType=TIMESTAMP},
+      monthlySales = #{monthlysales,jdbcType=INTEGER},
+      totalSales = #{totalsales,jdbcType=INTEGER},
+      inventory = #{inventory,jdbcType=INTEGER},
+      cpc_id = #{cpcId,jdbcType=INTEGER},
+      type = #{type,jdbcType=INTEGER},
+      xx_id = #{xxId,jdbcType=INTEGER},
+      particulars = #{particulars,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="top.catotaku.common.pojo.po.Commodity" >

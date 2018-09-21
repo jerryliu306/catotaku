@@ -1,0 +1,24 @@
+a{text-decoration: none}
+.pages{
+    height: 40px;
+    border: 2px solid #CDCDCD;
+    text-align: center;
+    background: #E8E8E8;
+    margin: 90px auto;
+    padding-top: 10px;
+}
+
+.pages a{
+    height: 28px;
+    line-height: 28px;
+    color: #333333;
+    display: inline-block;
+    border: 1px solid #CDCDCD;
+    padding: 0 9px;
+}
+
+.pages a:hover{border-color: red;color: red}
+.pages .active{font-weight: bold;background: #fcf9ea;
+    cursor: text;}
+.pages .active:hover{border-color: #CDCDCD;color: #333333}
+

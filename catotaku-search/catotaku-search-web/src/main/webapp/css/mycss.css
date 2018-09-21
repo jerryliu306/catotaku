@@ -1,0 +1,111 @@
+*{
+	margin: 0;padding: 0;
+}
+ui,li{
+	list-style: none;
+}
+ui:after{
+	content: '';display: block;clear: both;
+}
+.top_top{
+	height: 7px;
+}
+.top_middle{
+	width: 1180px;
+	text-align: center;
+	position: relative;
+	margin: auto;
+}
+
+.top_left{
+	margin-left: -10;
+	float: left;
+}
+.submit{
+	border-radius: 10px;
+}
+.submit:hover {
+	box-shadow: 3px 3px 5px #C0C0C0;
+}
+li{
+	float: left;
+}
+.top_right{
+	float: right;
+}
+.red{
+	color: red;
+}
+.top{
+	height: 40px;
+	background-color:whitesmoke
+}
+.top_middle_select{
+	height: 50px;
+	float: left;
+	text-align: left;
+	padding: 30px 0 0 0;
+}
+.top_middle_search{
+	width: 1180px;
+	text-align: left;
+	position: relative;
+	background-color:whitesmoke;
+	margin: 110px auto 0 auto;
+	padding: 10px;
+}
+.middle_top{
+	width: 1180px;
+	height: 40px;
+	margin: 10px auto;
+}
+.middle_top_left{
+	margin: 10px auto;
+	float: left;
+}
+.middle_top_right{
+	margin: 10px auto;
+	float: right;
+}
+.midlle_shop{
+	width: 1180px;
+	position: relative;
+	margin: 10px auto 0 auto;
+}
+.shop{
+	display: inline-block;
+	text-align: center;
+	border: #C0C0C0 solid 1px;
+	padding: 5px 18px 5px 18px;
+	margin: 2px;
+}
+.shop_price{
+	color: gold;
+	
+}
+.shop_name{
+	font-family: "楷体";
+}
+.shop_store{
+	color: silver;
+	font-size: 10px;
+}
+.shop_ecaluate{
+	color: silver;
+	font-size: 10px;
+	position: relative;
+	right: -75px;
+}
+.down{
+	width: 1180px;
+	position: relative;
+	margin: 50px auto;
+}
+.down_1{
+	width: 1180px;
+	height: 22px;
+}
+.down_2{
+	width: 22px;
+	width: 1180px;
+}

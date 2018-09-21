@@ -13,9 +13,9 @@
         <setting name="aggressiveLazyLoading" value="true" />
         <!-- 指定 MyBatis 所用日志的具体实现，未指定时将自动查找。SLF4J | LOG4J | LOG4J2 | JDK_LOGGING
             | COMMONS_LOGGING | STDOUT_LOGGING | NO_LOGGING -->
-<!--        <setting name="logImpl" value="LOG4J2" />-->
+        <!--<setting name="logImpl" value="LOG4J2" />-->
     </settings>
     <typeAliases>
-        <package name="top.catotaku.manager.pojo" />
+        <package name="top.catotaku.common.pojo" />
     </typeAliases>
 </configuration>

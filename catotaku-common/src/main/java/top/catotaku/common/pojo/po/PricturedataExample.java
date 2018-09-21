@@ -234,52 +234,62 @@ public class PricturedataExample {
             return (Criteria) this;
         }
 
-        public Criteria andNameEqualTo(Integer value) {
+        public Criteria andNameEqualTo(String value) {
             addCriterion("name =", value, "name");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotEqualTo(Integer value) {
+        public Criteria andNameNotEqualTo(String value) {
             addCriterion("name <>", value, "name");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThan(Integer value) {
+        public Criteria andNameGreaterThan(String value) {
             addCriterion("name >", value, "name");
             return (Criteria) this;
         }
 
-        public Criteria andNameGreaterThanOrEqualTo(Integer value) {
+        public Criteria andNameGreaterThanOrEqualTo(String value) {
             addCriterion("name >=", value, "name");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThan(Integer value) {
+        public Criteria andNameLessThan(String value) {
             addCriterion("name <", value, "name");
             return (Criteria) this;
         }
 
-        public Criteria andNameLessThanOrEqualTo(Integer value) {
+        public Criteria andNameLessThanOrEqualTo(String value) {
             addCriterion("name <=", value, "name");
             return (Criteria) this;
         }
 
-        public Criteria andNameIn(List<Integer> values) {
+        public Criteria andNameLike(String value) {
+            addCriterion("name like", value, "name");
+            return (Criteria) this;
+        }
+
+        public Criteria andNameNotLike(String value) {
+            addCriterion("name not like", value, "name");
+            return (Criteria) this;
+        }
+
+        public Criteria andNameIn(List<String> values) {
             addCriterion("name in", values, "name");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotIn(List<Integer> values) {
+        public Criteria andNameNotIn(List<String> values) {
             addCriterion("name not in", values, "name");
             return (Criteria) this;
         }
 
-        public Criteria andNameBetween(Integer value1, Integer value2) {
+        public Criteria andNameBetween(String value1, String value2) {
             addCriterion("name between", value1, value2, "name");
             return (Criteria) this;
         }
 
-        public Criteria andNameNotBetween(Integer value1, Integer value2) {
+        public Criteria andNameNotBetween(String value1, String value2) {
             addCriterion("name not between", value1, value2, "name");
             return (Criteria) this;
         }
@@ -294,52 +304,62 @@ public class PricturedataExample {
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlEqualTo(Integer value) {
+        public Criteria andPrictureurlEqualTo(String value) {
             addCriterion("prictureUrl =", value, "prictureurl");
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlNotEqualTo(Integer value) {
+        public Criteria andPrictureurlNotEqualTo(String value) {
             addCriterion("prictureUrl <>", value, "prictureurl");
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlGreaterThan(Integer value) {
+        public Criteria andPrictureurlGreaterThan(String value) {
             addCriterion("prictureUrl >", value, "prictureurl");
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlGreaterThanOrEqualTo(Integer value) {
+        public Criteria andPrictureurlGreaterThanOrEqualTo(String value) {
             addCriterion("prictureUrl >=", value, "prictureurl");
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlLessThan(Integer value) {
+        public Criteria andPrictureurlLessThan(String value) {
             addCriterion("prictureUrl <", value, "prictureurl");
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlLessThanOrEqualTo(Integer value) {
+        public Criteria andPrictureurlLessThanOrEqualTo(String value) {
             addCriterion("prictureUrl <=", value, "prictureurl");
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlIn(List<Integer> values) {
+        public Criteria andPrictureurlLike(String value) {
+            addCriterion("prictureUrl like", value, "prictureurl");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrictureurlNotLike(String value) {
+            addCriterion("prictureUrl not like", value, "prictureurl");
+            return (Criteria) this;
+        }
+
+        public Criteria andPrictureurlIn(List<String> values) {
             addCriterion("prictureUrl in", values, "prictureurl");
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlNotIn(List<Integer> values) {
+        public Criteria andPrictureurlNotIn(List<String> values) {
             addCriterion("prictureUrl not in", values, "prictureurl");
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlBetween(Integer value1, Integer value2) {
+        public Criteria andPrictureurlBetween(String value1, String value2) {
             addCriterion("prictureUrl between", value1, value2, "prictureurl");
             return (Criteria) this;
         }
 
-        public Criteria andPrictureurlNotBetween(Integer value1, Integer value2) {
+        public Criteria andPrictureurlNotBetween(String value1, String value2) {
             addCriterion("prictureUrl not between", value1, value2, "prictureurl");
             return (Criteria) this;
         }
@@ -354,52 +374,52 @@ public class PricturedataExample {
             return (Criteria) this;
         }
 
-        public Criteria andStatusEqualTo(Double value) {
+        public Criteria andStatusEqualTo(Integer value) {
             addCriterion("status =", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotEqualTo(Double value) {
+        public Criteria andStatusNotEqualTo(Integer value) {
             addCriterion("status <>", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThan(Double value) {
+        public Criteria andStatusGreaterThan(Integer value) {
             addCriterion("status >", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThanOrEqualTo(Double value) {
+        public Criteria andStatusGreaterThanOrEqualTo(Integer value) {
             addCriterion("status >=", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThan(Double value) {
+        public Criteria andStatusLessThan(Integer value) {
             addCriterion("status <", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThanOrEqualTo(Double value) {
+        public Criteria andStatusLessThanOrEqualTo(Integer value) {
             addCriterion("status <=", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIn(List<Double> values) {
+        public Criteria andStatusIn(List<Integer> values) {
             addCriterion("status in", values, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotIn(List<Double> values) {
+        public Criteria andStatusNotIn(List<Integer> values) {
             addCriterion("status not in", values, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusBetween(Double value1, Double value2) {
+        public Criteria andStatusBetween(Integer value1, Integer value2) {
             addCriterion("status between", value1, value2, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotBetween(Double value1, Double value2) {
+        public Criteria andStatusNotBetween(Integer value1, Integer value2) {
             addCriterion("status not between", value1, value2, "status");
             return (Criteria) this;
         }

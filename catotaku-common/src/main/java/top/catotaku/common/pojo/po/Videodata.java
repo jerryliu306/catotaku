@@ -5,7 +5,7 @@ public class Videodata {
 
     private Integer uId;
 
-    private Integer name;
+    private String name;
 
     private String videourl;
 
@@ -29,12 +29,12 @@ public class Videodata {
         this.uId = uId;
     }
 
-    public Integer getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Integer name) {
-        this.name = name;
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
     }
 
     public String getVideourl() {
